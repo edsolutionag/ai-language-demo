@@ -1,0 +1,61 @@
+body, html {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  background-color: yellow;
+}
+
+body {
+  height: inherit;
+  overflow: hidden;
+}
+
+h1, p {
+  font-family: "roboto",sans-serif;
+  text-align: center;
+  letter-spacing: .05em;
+  font-weight: 500;
+}
+
+div p {
+  padding: 20px;
+  background-color: #ffff88;
+}
+
+div {
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+button {
+  font-family: "roboto",sans-serif;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.2rem;
+  width: 270px;
+  line-height: 2;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 8px;
+  letter-spacing: .05em;
+  font-weight: 500;
+}
+
+@media all and (max-height: 410px) {
+  div {
+    position: static;
+  }
+}
+
+.phrase {
+  font-weight: bold;
+}
+
+.output {
+  font-style: italic;
+}
