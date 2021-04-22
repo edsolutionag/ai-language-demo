@@ -11,7 +11,7 @@ var phrases = [
   'l\'intelligence artificielle' ,
   'J\'aime mon travail',
   'Un chasseur sachant chasser doit savoir chasser sans son chien',
-  'edsolution est une startup'
+  'edsolution est une start-up'
 ];
 
 var phrasePara = document.querySelector('.phrase');
@@ -27,7 +27,7 @@ function randomPhrase() {
 
 function testSpeech() {
   testBtn.disabled = true;
-  testBtn.textContent = 'Aufnahme läuft...';
+  testBtn.textContent = 'Aufnahme läuft...👂';
 
   var phrase = phrases[randomPhrase()];
   // To ensure case consistency while checking with the returned output text
@@ -73,12 +73,12 @@ function testSpeech() {
   recognition.onspeechend = function() {
     recognition.stop();
     testBtn.disabled = false;
-    testBtn.textContent = 'Neue Aufnahme starten';
+    testBtn.textContent = 'Neue Aufnahme starten 🎤';
   }
 
   recognition.onerror = function(event) {
     testBtn.disabled = false;
-    testBtn.textContent = 'Nochmals aufnehmen';
+    testBtn.textContent = 'Nochmals aufnehmen 🎤';
     diagnosticPara.textContent = 'Fehler in der Spracherkennung: ' + event.error;
   }
   
@@ -123,3 +123,4 @@ function testSpeech() {
 }
 
 testBtn.addEventListener('click', testSpeech);
+
